@@ -5,7 +5,7 @@ public class Level1
         int b = Integer.parseInt(Integer.toString(a).substring(0,1));
         return b;
     }
-    public static int fac(int N) {
-        return (N == 1) ? 1 : N * squirrel(N - 1);
+    public static int fac(int A) {
+        return (A == 1) ? 1 : A * fac(A - 1);
     }
 }
