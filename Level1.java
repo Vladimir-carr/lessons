@@ -6,6 +6,6 @@ public class Level1
         return b;
     }
     public static int fac(int A) {
-        return (A == 1) ? 1 : A * fac(A - 1);
+        return (A == 1 || A == 0) ? 1 : A * fac(A - 1);
     }
 }
