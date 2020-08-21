@@ -1,11 +1,19 @@
 public class Level1
 {
-    public static int squirrel(int N) {
-        int a = fac(N);
-        int b = Integer.parseInt(Integer.toString(a).substring(0,1));
-        return b;
-    }
-    public static int fac(int A) {
-        return (A == 1 || A == 0) ? 1 : A * fac(A - 1);
+    public static int odometer(int [] oksana) {
+        int sum = 0;
+        int speed = 0;
+        for (int i = 0; i < oksana.length; i++) {
+            if (i == 0) {
+                speed = oksana[i];
+                sum += speed * oksana[i+1];
+            }
+            if (i >= 2 && i % 2 == 0) {
+                speed = oksana[i];
+                sum += speed * (oksana[i+1] - oksana[i - 1]);
+            }
+            speed = 0;
+        }
+        return sum;
     }
 }
