@@ -5,6 +5,7 @@ public class Level1
         int[] desc = new int[N];
         for (int i = 0; i < Tele.length; i++) {
             asc[i] = Tele[i];
+            desc[i] = Tele[i];
         }
         for (int i = 0; i < asc.length - 1; i++) {
             for (int j = asc.length - 1; j > i; j--) {
@@ -15,9 +16,7 @@ public class Level1
                 }
             }
         }
-        for (int i = 0; i < Tele.length; i++) {
-            desc[i] = Tele[i];
-        }
+        
         for (int i = 0; i < desc.length - 1; i++) {
             for (int j = desc.length - 1; j > i; j--) {
                 if (desc[j - 1] < desc[j]) {
